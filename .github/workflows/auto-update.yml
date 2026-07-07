@@ -1,0 +1,47 @@
+name: Auto Update README
+
+on:
+  schedule:
+    # This configuration runs the script automatically every hour
+    - cron: '0 * * * *'
+  workflow_dispatch: # This allows you to run it manually whenever you want
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Run Update Script
+      run: |
+        python -c '
+        import datetime
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        content = f"""- 👋 Hi, I’m Devis Temmo
+        - 💻 Full Stack Web Developer passionate about building scalable web applications
+        - ⚡ Skilled in both frontend and backend development
+        - 🛠️ I enjoy creating real-world solutions using modern web technologies
+        - 🤝 Open to collaboration on web development and software projects
+        - 📫 Reach me at: devistemmo59@gmail.com
+        
+        ---
+        ⏰ *This profile auto-updates every hour. Last updated: {current_time} UTC*"""
+        
+        with open("README.md", "w") as f:
+            f.write(content)
+        '
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add README.md
+        git diff-index --quiet HEAD || git commit -m "bot: auto-updated readme timestamp"
+        git push
