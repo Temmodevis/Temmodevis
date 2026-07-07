@@ -1,9 +1,10 @@
-- 👋 Hi, I’m Devis Temmo
-- 💻 Full Stack Web Developer passionate about building scalable web applications
-- ⚡ Skilled in both frontend and backend development
-- 🛠️ I enjoy creating real-world solutions using modern web technologies
-- 🤝 Open to collaboration on web development and software projects
-- 📫 Reach me at: devistemmo59@gmail.com
+# 👋 Hello World!
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&duration=3500&pause=1000&color=39D353&width=600&lines=👋+Hi%2C+I’m+Devis+Temmo...;💻+Full+Stack+Web+Developer...;⚡+Skilled+in+frontend+and+backend...;🤝+Open+to+collaboration+on+web+projects!" alt="Typing Effect" />
+</a>
 
 ---
-⏰ *This profile auto-updates every hour. Last updated: 2026-07-07 07:04:16 UTC*
+
+- 🛠️ I enjoy creating real-world solutions using modern web technologies
+- 📫 Reach me at: devistemmo59@gmail.com
